@@ -41,7 +41,7 @@ export const logout = () => {
   };
 };
 
-export const singup = (user) => {
+export const signup = (user) => {
   return dispatch => {
     return SessionApiUtil.signup(user).then(
       (currentUser) => {dispatch(receiveCurrentUser(currentUser));},
