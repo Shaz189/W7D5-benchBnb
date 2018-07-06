@@ -1,3 +1,1 @@
-json.session do
-  json.extract! @user, :id
-end
+json.extract! @user, :id
