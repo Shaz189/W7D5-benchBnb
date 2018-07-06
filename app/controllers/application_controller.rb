@@ -20,8 +20,11 @@ class ApplicationController < ActionController::Base
   end
 
   def logout
-    current_user.reset_session_token!
-    session[:session_token] = nil
+    if logged_in?
+      current_user.reset_session_token!
+      session[:session_token] = nil
+    else
+      render json: ["no current user found"], status: 404
   end
 
 end
