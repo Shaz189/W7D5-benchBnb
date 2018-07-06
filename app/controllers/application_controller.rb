@@ -25,6 +25,7 @@ class ApplicationController < ActionController::Base
       session[:session_token] = nil
     else
       render json: ["no current user found"], status: 404
+    end
   end
 
 end
